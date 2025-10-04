@@ -1,0 +1,30 @@
+🧪 Step 1: Create test log file
+@'
+2024-12-01 10:31:12.123 Info  Transferred: 128.0 GB (10.2 GB over WAN), Duration: 00:34:12, Avg speed: 64 MB/s
+2024-12-01 10:32:00.000 Info  Bottleneck: Network: 63% (source 20%, proxy 5%, target 12%)
+2024-12-01 10:33:00.000 Info  WAN Accelerator cache hit: 72%
+2024-12-01 10:34:00.000 Info  Retries: 3
+'@ | Set-Content -Encoding UTF8 "$pwd\test.log"
+
+
+✅ This will create a file named test.log inside:
+C:\Users\eadwood.####s\OneDrive - Veeam####\Desktop\veeam-netperf
+
+Step 2 Run the parser on it:
+py -3.13 .\veeam-netperf-parser.py validate --input "$pwd\test.log" --limit 10
+py -3.13 .\veeam-netperf-parser.py scan --input "$pwd\test.log"
+
+You should see:
+
+The first command prints matching lines (showing that regex works)
+
+The second command creates test.csv automatically in your veeam-netperf folder
+
+✅ Output, You’ll end up with a file like:
+C:\Users\eadwood.rosales\OneDrive - Veeam Software Corporation\Desktop\veeam-netperf\test.csv
+
+And inside, it should look like:
+
+event_time	bytes_sent	duration_s	network_bottleneck_pct	wan_cache_hit_pct	retries	message
+2024-12-01 10:31:12.123	137438953472	2052	63	72	3	Transferred: 128.0 GB...
+
