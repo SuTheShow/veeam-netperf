@@ -10,12 +10,12 @@ It extracts **network performance metrics**, **retry counts**, and **WAN cache h
 ## 🚀 Features
 ✅ Parse `.log` files or entire Veeam log folders recursively  
 ✅ Auto-detect metrics:
-- **Transferred** — bytes and duration
-- **Bottleneck: Network** — network bottleneck %
-- **WAN Accelerator cache hit** — cache hit ratio
-- **Retries** — retry attempts  
+- **Transferred** - bytes and duration
+- **Bottleneck: Network** - network bottleneck %
+- **WAN Accelerator cache hit** - cache hit ratio
+- **Retries** - retry attempts  
 ✅ Automatically names output CSV after the log folder (e.g. `LABVEEAM01.CONTOSO.CSV`)  
-✅ Works offline — no dependencies, no database required  
+✅ Works offline - no dependencies, no database required  
 
 ---
 
