@@ -3,7 +3,7 @@ A lightweight, zero-dependency Python 3.13 CLI tool for parsing Veeam component 
 # ⚡ Veeam NetPerf Parser
 
 A lightweight **Python 3.13** CLI tool to analyze **Veeam component logs** (VBR, Proxy, Repository, WAN Accelerator).  
-It extracts **network performance metrics**, **retry counts**, and **WAN cache hit rates** — exporting them into structured CSV files for easy review or visualization.
+It extracts **network performance metrics**, **retry counts**, and **WAN cache hit rates**, exporting them into structured CSV files for easy review or visualization.
 
 ---
 
